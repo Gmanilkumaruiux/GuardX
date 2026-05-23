@@ -7,7 +7,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-brand-background text-white overflow-hidden relative">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-[800px] z-0 overflow-hidden opacity-30 pointer-events-none">
-        <img src="/cyber_hero_bg.png" alt="Cyber Background" className="w-full h-full object-cover mix-blend-screen" />
+        <img src={`${import.meta.env.BASE_URL}cyber_hero_bg.png`} alt="Cyber Background" className="w-full h-full object-cover mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-brand-background"></div>
       </div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-brand-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
