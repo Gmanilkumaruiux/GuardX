@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-background: #0a0f1c;
+  --color-brand-surface: #111827;
+  --color-brand-surface-light: #1f2937;
+  --color-brand-primary: #00f0ff;
+  --color-brand-primary-light: #4dffff;
+  --color-brand-success: #39ff14;
+  --color-brand-warning: #ffea00;
+  --color-brand-danger: #ff003c;
+  --color-brand-text: #e2e8f0;
+  --color-brand-text-muted: #94a3b8;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-background text-brand-text font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-brand-surface/60 backdrop-blur-md border border-brand-primary/20 rounded-xl shadow-[0_4px_30px_rgba(0,240,255,0.1)];
+  }
+  
+  .glass-card-hover {
+    @apply hover:border-brand-primary/50 hover:shadow-[0_4px_30px_rgba(0,240,255,0.2)] transition-all duration-300;
+  }
+
+  .neon-text-primary {
+    @apply text-brand-primary drop-shadow-[0_0_8px_rgba(0,240,255,0.8)];
+  }
+
+  .neon-text-danger {
+    @apply text-brand-danger drop-shadow-[0_0_8px_rgba(255,0,60,0.8)];
+  }
+
+  .neon-border-primary {
+    @apply border-brand-primary shadow-[0_0_10px_rgba(0,240,255,0.5)];
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0f1c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00f0ff;
+  }
+}
